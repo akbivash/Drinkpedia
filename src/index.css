@@ -1,13 +1,242 @@
 body {
+  position: relative;
   margin: 0;
+  padding: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app{
+  display: grid;
+  gap: 1rem;
+
+}
+
+@media screen and(max-width:720px) {
+  .app{
+    display: grid;
+    gap: 5px;
+  }
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.7rem;
+left: 0;
+height: 12vh;
+right: 0;
+position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.menu_toggle{
+display: flex;
+font-size: 1.9rem;
+}
+
+
+
+.form_control{
+  display: grid;
+  place-items: center;
+  /* padding: 1rem; */
+  font-size: 1.3rem;
+  gap: 1rem;
+}
+.form_control label{
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.form_control input{
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid gray;
+  outline: none;
+  padding: 10px 1.3rem;
+  border-radius: 10px;
+}
+@media screen and (min-width:300px) {
+ .form_control {
+padding: 0 2rem;
+  }
+}
+
+.nav-links{
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-mobile{
+  display: flex;
+  justify-content: center;
+}
+.nav-mobile div{
+  display: grid;
+  gap: 1rem;
+padding: 10px 0;
+}
+@media screen and (min-width:720px) {
+  .nav-mobile{
+    display: none;
+  }
+}
+ @media screen and (max-width:720px) {
+  .nav-links{
+    display: none;
+  }
+  
+ }
+
+.menu_toggle{
+  display: block;
+}
+
+@media screen and (min-width:700px) {
+
+.menu_toggle{
+  display: none;
+}
+
+}
+
+.fixed{
+  position: fixed;
+background: #fff;
+transition: .6s ease;
+z-index: 99;
+}
+/* Routes  */
+
+.routes{
+  padding: 0 2rem;
+}
+.backBtn {
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .backBtn{
+   /* display: grid;
+justify-content: center; */
+display: block;
+
+}
+}
+.backBtn p{
+  
+  text-align: center;
+border-radius: 10px;
+  background: green;
+  color: #fff;
+  padding: 8px;
+}
+
+.drink-info {
+ /* display: grid; */
+ flex: 1;
+
+}
+.drink-info p{
+  display: flex;
+  gap: 2rem;
+}
+.drink-data{
+  background: green;
+  color: #fff;
+padding: 4px;
+border-radius: 5px;
+
+}
+/* loading  */
+.loader,
+.loader:before,
+.loader:after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: var(--primaryColor);
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 20rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+/* about  */
+
+.about{
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+html {
+  overflow-y: scroll;
 }
