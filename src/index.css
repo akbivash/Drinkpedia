@@ -62,6 +62,7 @@ font-size: 1.9rem;
 .form_control label{
   text-transform: capitalize;
   letter-spacing: 2px;
+  text-align: center;
 }
 .form_control input{
   width: 100%;
@@ -73,7 +74,7 @@ font-size: 1.9rem;
 }
 @media screen and (min-width:300px) {
  .form_control {
-padding: 0 2rem;
+/* padding: 0 2rem; */
   }
 }
 
